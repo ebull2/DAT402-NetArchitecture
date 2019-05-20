@@ -1,0 +1,103 @@
+
+
+  <div class="container-fluid header">
+    <div class="row">
+      <div class="w-100">
+        <div class="col-lg-6 col-md-6 col-xs-2">
+          <div class="shape-left d-flex fixed-top justify-content-start">
+            <div id="square"></div>
+            <div id="triangle-topleft"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-auto col-md-auto">
+          <div class="d-flex justify-content-start fixed-top ">
+            <div id="percentCount" class="percent-count">0%</div>
+          </div>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-auto col-xs-auto">
+          <div class="d-flex justify-content-center fixed-top">
+            <img src="assets/niddel-4.png" class="img" height="100px" width="120px">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="w-100">
+        <div class="col-lg-auto col-md-auto col-xs-auto m4">
+          <div class="shape-right d-flex m4 fixed-top">
+            <div class="icon">
+            </div>
+            <div id="triangle-topright"></div>
+            <div id="square"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-auto m3">
+    <div class="row">
+      <div class="d-flex float-right justify-content-end fixed-top ">
+          <a href="RankScreen"><img src="assets/greenICON.png" class="icon" height="50px" width="70px"></a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+      <div class="container">
+        <div class="w-100">
+          <div class="d-flex justify-content-center heading-text">
+            <h1>click your niche spot</h1>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="w-100">
+          <div class="col-lg-auto col-md-auto">
+            <div class="d-flex sjustify-content-center align-items-center">
+    <div id="map"></div>
+
+
+
+    <script>
+
+      function initMap() {
+
+        //map options
+        var options = {
+          center: {lat: 50.376289,lng: -4.143841},
+          zoom: 8
+        }
+
+        //new map
+        var map = new
+        google.maps.Map(document.getElementById('map'), options);
+
+
+        //Marker clicker
+        google.maps.event.addListener(map, 'click', function(event) {
+          placeMarker(map, event.latLng);
+        });
+
+        function placeMarker(map, location) {
+          var marker = new google.maps.Marker({
+            position: location,
+            map: map
+          });
+
+            infowindow.open(map,marker);
+          }
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOL1vi59qcvshHJ8XM3wneBldXF4cCnrc&callback=initMap"async defer></script>
+    <script> src="https://maps.googleapis.com/maps/api/distancematrix/json?origins=Seattle&destinations=San+Francisco&key=AIzaSyBOL1vi59qcvshHJ8XM3wneBldXF4cCnrc&callback=initMap"</script>
+  </div>
+</div>
+</div>
+</div>
+</div>
